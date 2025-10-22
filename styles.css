@@ -1,10 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') 
+  background: url('https://user-images.githubusercontent.com/78348500/218320592-e82de1d4-dca2-4a76-901a-7ca5c5b3fc95.png') 
               no-repeat center center fixed;
   background-size: cover;
-  margin: 0;
-  padding: 0;
 }
 
 ul {
@@ -12,8 +10,6 @@ ul {
   background-color: rgba(255, 255, 255, 0.9);
   width: 400px;
   margin: 50px auto;
-  padding: 20px;
-  border-radius: 10px;
 }
 
 li {
