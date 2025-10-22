@@ -1,18 +1,71 @@
 body {
-  font-family: Arial, sans-serif;
-  background: url('https://user-images.githubusercontent.com/78348500/218320592-e82de1d4-dca2-4a76-901a-7ca5c5b3fc95.png') 
-              no-repeat center center fixed;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80')
+    no-repeat center center fixed;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
 }
 
-ul {
-  list-style-type: square;
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 400px;
-  margin: 50px auto;
+/* Centered white box */
+.container {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
 }
 
-li {
-  font-size: 18px;
-  margin: 10px 0;
+/* Remove default list style */
+ul#band {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom square bullets */
+ul#band li {
+  position: relative;
+  padding: 16px 24px 16px 40px;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 16px;
+  color: #222;
+}
+
+/* Small black square bullet before each item */
+ul#band li::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  transform: translateY(-50%);
+}
+
+/* Remove border from last item */
+ul#band li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+  }
+
+  ul#band li {
+    padding: 14px 20px 14px 36px;
+    font-size: 15px;
+  }
+
+  ul#band li::before {
+    left: 16px;
+  }
 }
